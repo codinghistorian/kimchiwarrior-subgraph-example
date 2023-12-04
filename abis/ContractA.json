@@ -1,0 +1,54 @@
+[
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_contractB", "type": "address" }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "_value",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "_address",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "_flag",
+        "type": "bool"
+      }
+    ],
+    "name": "EventA",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "contractB",
+    "outputs": [
+      { "internalType": "contract IContractB", "name": "", "type": "address" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_value", "type": "uint256" },
+      { "internalType": "address", "name": "_address", "type": "address" },
+      { "internalType": "bool", "name": "_flag", "type": "bool" }
+    ],
+    "name": "triggerEvents",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

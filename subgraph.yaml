@@ -1,0 +1,24 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: ContractA
+    network: mainnet
+    source:
+      address: "0x315c84Ae46739f68f486A52506f2492E87B45e5B"
+      abi: ContractA
+      startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - EventA
+      abis:
+        - name: ContractA
+          file: ./abis/ContractA.json
+      eventHandlers:
+        - event: EventA(indexed uint256,indexed address,bool)
+          handler: handleEventA
+      file: ./src/contract-a.ts
