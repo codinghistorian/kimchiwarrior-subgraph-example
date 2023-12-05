@@ -2,7 +2,11 @@
   "mainnet": {
     "ContractA": {
       "address": "0x315c84Ae46739f68f486A52506f2492E87B45e5B",
-      "startBlock": 0
+      "startBlock": 57518567
+    },
+    "ContractB": {
+      "address": "0xd4C07B79147ac66916e9134115139165952B6A17",
+      "startBlock": 57518567
     }
   }
 }

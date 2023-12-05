@@ -1,13 +1,13 @@
 specVersion: 0.0.5
 description: Kimchiman's subgraph example
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: ContractA
     network: mainnet
     source:
-      address: '0x315c84Ae46739f68f486A52506f2492E87B45e5B'
+      address: "0x315c84Ae46739f68f486A52506f2492E87B45e5B"
       abi: ContractA
     mapping:
       kind: ethereum/events
@@ -17,16 +17,16 @@ dataSources:
         - EventA
       abis:
         - name: ContractA
-          file: ./abis/ContractA.json
+          file: ContractA/abis/ContractA.json
       eventHandlers:
         - event: EventA(indexed uint256,indexed address,bool)
           handler: handleEventA
-      file: ./src/MappingEventA.ts
+      file: ContractA/ContractA.wasm
   - kind: ethereum/contract
     name: ContractB
     network: mainnet
     source:
-      address: '0xd4C07B79147ac66916e9134115139165952B6A17'
+      address: "0xd4C07B79147ac66916e9134115139165952B6A17"
       abi: ContractB
     mapping:
       kind: ethereum/events
@@ -36,8 +36,8 @@ dataSources:
         - EventB
       abis:
         - name: ContractB
-          file: ./abis/ContractB.json
+          file: ContractB/abis/ContractB.json
       eventHandlers:
         - event: EventB(indexed uint256,indexed address,bool)
           handler: handleEventB
-      file: ./src/MappingEventB.ts
+      file: ContractB/ContractB.wasm
